@@ -6,15 +6,15 @@ import pages.component.RegistrationPage;
 import static pages.component.FillingForm.assertTitle;
 import static pages.component.FillingForm.verifyResult;
 
-public class RegistrationFromTest extends BaseTest{
+public class RegistrationFormTest extends BaseTest{
     private static final String URL_DEMO_QA = "automation-practice-form";
-    public static final String USER_NAME = "Екатерина";
-    public static final String USER_LAST_NAME = "Кор";
+    public static final String USER_NAME = "Ekaterina";
+    public static final String USER_LAST_NAME = "Kor";
     public static final String USER_EMAIL = "kat@gmail.com";
     public static final String USER_PHONE = "9104501921";
     public static final String DEFAULT_MONTH = "November";
     public static final String DEFAULT_YEAR = "1990";
-    public static final String DEFAULT_ADDRESS = "Лесная, 1";
+    public static final String DEFAULT_ADDRESS = "Lesnaya, 1";
     public static final String DEFAULT_SUBJECT = "English";
     public static final String DEFAULT_PICTURE = "msk.jpg";
     public static final String DEFAULT_STATE = "NCR";

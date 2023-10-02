@@ -1,11 +1,9 @@
 package pages.component;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import pages.BasePage;
-import pages.ResultTable;
 
-import static com.codeborne.selenide.Selectors.byTagAndText;
+
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -26,7 +24,6 @@ public class RegistrationPage extends BasePage {
             hobbiesWrapper = $("#hobbiesWrapper");
 
     private CalendarElement calendarElement = new CalendarElement();
-    private FillingForm fillingForm = new FillingForm();
 
     public RegistrationPage openPage(String url) {
         open(url);
@@ -61,7 +58,7 @@ public class RegistrationPage extends BasePage {
 
     public RegistrationPage setCalendar(String month, String year, String day) {
         dateOfBirth.click();
-        calendarElement.setupCalendarElement(month, year, day);
+        calendarElement.setDate(day, month, year);
         return this;
     }
 
@@ -98,10 +95,6 @@ public class RegistrationPage extends BasePage {
         return this;
     }
 
-    public RegistrationPage closeButtonClick() {
-        executeJavaScript("document.getElementById('closeLargeModal').click()");
-        return this;
-    }
 
     public RegistrationPage selectHobby(String hobby) {
         hobbiesWrapper.$(byText(hobby)).click();
